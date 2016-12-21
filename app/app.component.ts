@@ -20,6 +20,8 @@ export class Hero {
       flex-direction: row;
       height: 100vh;
       position: relative;
+      animation: idle 1000ms ease-in-out;
+      animation-iteration-count: infinite;
     }
     img {
       position: absolute;
@@ -41,6 +43,18 @@ export class Hero {
       background: transparent url(app/img/body.svg) center center no-repeat;
       background-size: contain;
     }
+    .gitte:before {
+      content:"";
+      position:absolute;
+      z-index:-1;
+      box-shadow:0 0 10px rgba(0,0,0,1);
+      bottom: -100px;
+      left:50%;
+      width:200px;
+      height:20px;
+      border-radius:100%;
+      background-color: #666;
+    }
     .gitte012 {
       animation: g012 1000ms linear both;
     }
@@ -57,6 +71,11 @@ export class Hero {
       animation: g02 1000ms linear both;
     }
 
+    @keyframes idle {
+      0% { top: 0; }
+      50% { top: 10px; }
+      100% { top: 0; }
+    }
 
     @keyframes g012 {
       0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
