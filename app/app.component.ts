@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http, Response, HttpModule } from '@angular/http';
 export class Hero {
   id: number;
   name: string;
@@ -8,7 +9,7 @@ export class Hero {
   template: `
     <img [class]="getEyes()" src="app/img/eyes.svg"/>
     <div class="gitte gitte012"
-    (click)="fat = !fat"
+    (click)="makeRequest()"
     [class]="getFat()"
     ></div>
   `,
@@ -236,7 +237,8 @@ export class AppComponent {
   title = 'Gitte';
   fat: false;
 
-  constructor() {
+  constructor(private http: Http) {
+
   }
 
   getFat() {
@@ -252,5 +254,12 @@ export class AppComponent {
     } else {
       return "small";
     }
+  }
+
+  makeRequest(): void {
+    this.http.request('http://localhost:8080').subscribe((res: Response) => {
+      const data = res.json();
+      console.log(data);
+    })
   }
 }
