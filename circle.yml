@@ -1,6 +1,6 @@
 test:
   override:
-    - echo TEST
+    - true
 
 dependencies:
   override:
