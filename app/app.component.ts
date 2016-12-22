@@ -9,10 +9,9 @@ export class Hero {
   template: `
     <div class="shadow">
       <div class="character">
-        <img [class]="getEyes()" src="app/img/eyes.svg"/>
+        <img [class]="'eyes' + size" (click)="makeRequest()" src="app/img/eyes.svg"/>
         <div [class]="'gitte gitte' + size"
         (click)="makeRequest()"
-        [class]="getFat()"
         ></div>
     </div>
     </div>
@@ -48,7 +47,6 @@ export class AppComponent {
     this.http.request('http://localhost:8080').subscribe((res: Response) => {
       const data = res.json();
       this.size=data.lines;
-      console.log(data.lines);
     })
   }
 }
