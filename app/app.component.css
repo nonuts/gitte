@@ -22,19 +22,19 @@ img {
   animation: idle 1000ms ease-in reverse;
   animation-iteration-count: infinite;
 }
-.eyes1 {
+.eyes4 {
   width: 100px; height: 100px; top: 0%;
 }
-.eyes2 {
+.eyes3 {
   width: 250px; height: 120px; left: 30%;
 }
-.eyes3 {
+.eyes2 {
   width: 15px; height: 100px;
 }
-.eyes4 {
+.eyes1 {
   width: 300px; height: 120px; left: -20%
 }
-.eyes5 {
+.eyes0 {
   width: 100px; height: 100px;
 }
 .gitte {
@@ -61,33 +61,16 @@ img {
   animation-iteration-count: infinite;
   transition: all 200ms ease-in-out;
 }
-.shadow1 {
+.shadow4 {
   position: relative;
 }
-.shadow1:before {
+.shadow4:before {
   content:"";
   position:absolute;
   z-index:-1;
   bottom: -200px;
   left:50%;
   width:160px;
-  height:20px;
-  border-radius:100%;
-  background-color: rgba(0,0,0,1);
-  animation: shadow-idle 1000ms ease-in-out;
-  animation-iteration-count: infinite;
-  transition: all 200ms ease-in-out;
-}
-.shadow2 {
-  position: relative;
-}
-.shadow2:before {
-  content:"";
-  position:absolute;
-  z-index:-1;
-  bottom: -200px;
-  left:50%;
-  width:220px;
   height:20px;
   border-radius:100%;
   background-color: rgba(0,0,0,1);
@@ -104,6 +87,23 @@ img {
   z-index:-1;
   bottom: -200px;
   left:50%;
+  width:220px;
+  height:20px;
+  border-radius:100%;
+  background-color: rgba(0,0,0,1);
+  animation: shadow-idle 1000ms ease-in-out;
+  animation-iteration-count: infinite;
+  transition: all 200ms ease-in-out;
+}
+.shadow2 {
+  position: relative;
+}
+.shadow2:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom: -200px;
+  left:50%;
   width:280px;
   height:20px;
   border-radius:100%;
@@ -112,10 +112,10 @@ img {
   animation-iteration-count: infinite;
   transition: all 200ms ease-in-out;
 }
-.shadow4 {
+.shadow1 {
   position: relative;
 }
-.shadow4:before {
+.shadow1:before {
   content:"";
   position:absolute;
   z-index:-1;
@@ -129,10 +129,10 @@ img {
   animation-iteration-count: infinite;
   transition: all 200ms ease-in-out;
 }
-.shadow5 {
+.shadow0 {
   position: relative;
 }
-.shadow5:before {
+.shadow0:before {
   content:"";
   position:absolute;
   z-index:-1;
@@ -146,22 +146,22 @@ img {
   animation-iteration-count: infinite;
   transition: all 200ms ease-in-out;
 }
-.gitte1 {
+.gitte4 {
   animation: g012 1000ms linear both;
 }
-.gitte2 {
+.gitte3 {
   animation: g014 1000ms linear both;
   filter: hue-rotate(-30deg);
 }
-.gitte3 {
+.gitte2 {
   animation: g016 1000ms linear both;
   filter: hue-rotate(-50deg);
 }
-.gitte4 {
+.gitte1 {
   animation: g018 1000ms linear both;
   filter: hue-rotate(-70deg);
 }
-.gitte5 {
+.gitte0 {
   animation: g02 1000ms linear both;
   filter: hue-rotate(-140deg);
 }

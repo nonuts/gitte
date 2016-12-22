@@ -43,6 +43,7 @@ export class AppComponent {
 
   makeRequest(): void {
     this.http.request('http://localhost:8080').subscribe((res: Response) => {
+      debugger;
       const data = res.json();
       this.size=data.lines;
     })
