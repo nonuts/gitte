@@ -19,6 +19,8 @@ img {
   z-index: 10;
   left: 50%; top: 50%;
   transition: all 0.2s;
+  animation: idle 1000ms ease-in reverse;
+  animation-iteration-count: infinite;
 }
 .eyes1 {
   width: 100px; height: 100px; top: 0%;
