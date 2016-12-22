@@ -149,15 +149,19 @@ img {
 }
 .gitte2 {
   animation: g014 1000ms linear both;
+  filter: hue-rotate(30deg);
 }
 .gitte3 {
   animation: g016 1000ms linear both;
+  filter: hue-rotate(50deg);
 }
 .gitte4 {
   animation: g018 1000ms linear both;
+  filter: hue-rotate(70deg);
 }
 .gitte5 {
   animation: g02 1000ms linear both;
+  filter: hue-rotate(140deg);
 }
 
 @keyframes idle {

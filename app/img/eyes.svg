@@ -5,10 +5,12 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="80---Spotlight" transform="translate(-26.000000, -32.000000)" fill="#FFFFFF">
-            <g id="eyes" transform="translate(26.000000, 32.000000)">
-                <circle id="Oval" cx="3" cy="3" r="3"></circle>
-                <circle id="Oval-Copy" cx="12" cy="3" r="3"></circle>
+        <g id="gitte" transform="translate(-19.000000, -23.000000)">
+            <g id="eyes" transform="translate(19.000000, 23.000000)">
+                <circle id="Oval" fill="#FFFFFF" cx="3" cy="3" r="3"></circle>
+                <circle id="Oval-Copy" fill="#000000" cx="3" cy="3" r="1"></circle>
+                <circle id="Oval-Copy" fill="#FFFFFF" cx="12" cy="3" r="3"></circle>
+                <circle id="Oval-Copy-Copy" fill="#000000" cx="12.5" cy="1.5" r="0.5"></circle>
             </g>
         </g>
     </g>
