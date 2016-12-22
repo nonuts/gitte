@@ -10,6 +10,7 @@
   position: relative;
   animation: idle 1000ms ease-in-out;
   animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
 }
 img {
   position: absolute;
@@ -23,7 +24,7 @@ img {
   width: 100px; height: 100px; top: 0%;
 }
 .eyes2 {
-  width: 250px; height: 120px; left: -10%;
+  width: 250px; height: 120px; left: 30%;
 }
 .eyes3 {
   width: 15px; height: 100px;
@@ -149,25 +150,25 @@ img {
 }
 .gitte2 {
   animation: g014 1000ms linear both;
-  filter: hue-rotate(30deg);
+  filter: hue-rotate(-30deg);
 }
 .gitte3 {
   animation: g016 1000ms linear both;
-  filter: hue-rotate(50deg);
+  filter: hue-rotate(-50deg);
 }
 .gitte4 {
   animation: g018 1000ms linear both;
-  filter: hue-rotate(70deg);
+  filter: hue-rotate(-70deg);
 }
 .gitte5 {
   animation: g02 1000ms linear both;
-  filter: hue-rotate(140deg);
+  filter: hue-rotate(-140deg);
 }
 
 @keyframes idle {
-  0% { top: 0; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% { top: 0; transform: rotate(2deg); }
+  50% { top: 10px; transform: rotate(0deg); }
+  100% { top: 0; transform: rotate(2deg); }
 }
 
 @keyframes shadow-idle {
