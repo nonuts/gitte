@@ -7,11 +7,16 @@ export class Hero {
 @Component({
   selector: 'my-app',
   template: `
-    <img [class]="getEyes()" src="app/img/eyes.svg"/>
-    <div class="gitte gitte012"
-    (click)="makeRequest()"
-    [class]="getFat()"
-    ></div>
+    <div class="shadow">
+      <div class="character">
+        <img [class]="getEyes()" src="app/img/eyes.svg"/>
+        <div [class]="'gitte gitte' + size"
+        (click)="makeRequest()"
+        [class]="getFat()"
+        ></div>
+    </div>
+    </div>
+    
   `,
   styles: [`
     :host {
@@ -21,6 +26,9 @@ export class Hero {
       flex-direction: row;
       height: 100vh;
       position: relative;
+    }
+    .character {
+      position: relative;
       animation: idle 1000ms ease-in-out;
       animation-iteration-count: infinite;
     }
@@ -29,7 +37,7 @@ export class Hero {
       width: 100px;
       height: 100px;
       z-index: 10;
-      left: 50%;
+      left: 50%; top: 50%;
       transition: all 0.2s;
     }
     .small {
@@ -44,31 +52,36 @@ export class Hero {
       background: transparent url(app/img/body.svg) center center no-repeat;
       background-size: contain;
     }
-    .gitte:before {
+    .shadow {
+      position: relative;
+    }
+    .shadow:before {
       content:"";
       position:absolute;
       z-index:-1;
-      box-shadow:0 0 10px rgba(0,0,0,1);
+      box-shadow:0 0 10px rgba(0,0,0,0.7);
       bottom: -100px;
       left:50%;
       width:200px;
       height:20px;
       border-radius:100%;
-      background-color: #666;
+      background-color: rgba(0,0,0,0.7);
+      animation: shadow-idle 1000ms ease-in-out;
+      animation-iteration-count: infinite;
     }
-    .gitte012 {
+    .gitte1 {
       animation: g012 1000ms linear both;
     }
-    .gitte014 {
+    .gitte2 {
       animation: g014 1000ms linear both;
     }
-    .gitte016 {
+    .gitte3 {
       animation: g016 1000ms linear both;
     }
-    .gitte018 {
+    .gitte4 {
       animation: g018 1000ms linear both;
     }
-    .gitte02 {
+    .gitte5 {
       animation: g02 1000ms linear both;
     }
 
@@ -76,6 +89,12 @@ export class Hero {
       0% { top: 0; }
       50% { top: 10px; }
       100% { top: 0; }
+    }
+    
+    @keyframes shadow-idle {
+      0% { width: 200px; opacity: 0.3; }
+      50% { width: 210px; opacity: 0.35; }
+      100% { width: 200px; opacity: 0.3; }
     }
 
     @keyframes g012 {
@@ -236,6 +255,7 @@ export class Hero {
 export class AppComponent {
   title = 'Gitte';
   fat: false;
+  size: number;
 
   constructor(private http: Http) {
 
@@ -259,7 +279,8 @@ export class AppComponent {
   makeRequest(): void {
     this.http.request('http://localhost:8080').subscribe((res: Response) => {
       const data = res.json();
-      console.log(data);
+      this.size=data.lines;
+      console.log(data.lines);
     })
   }
 }
