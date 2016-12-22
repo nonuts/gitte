@@ -1,6 +1,6 @@
 test:
   override:
-    - echo TEST
+    - ejbsd
 
 dependencies:
   override:
