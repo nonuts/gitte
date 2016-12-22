@@ -59,13 +59,12 @@ export class Hero {
       content:"";
       position:absolute;
       z-index:-1;
-      box-shadow:0 0 10px rgba(0,0,0,0.7);
       bottom: -100px;
       left:50%;
       width:200px;
       height:20px;
       border-radius:100%;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,1);
       animation: shadow-idle 1000ms ease-in-out;
       animation-iteration-count: infinite;
     }
@@ -92,9 +91,9 @@ export class Hero {
     }
     
     @keyframes shadow-idle {
-      0% { width: 200px; opacity: 0.3; }
-      50% { width: 210px; opacity: 0.35; }
-      100% { width: 200px; opacity: 0.3; }
+      0% { width: 200px; opacity: 0.3; filter: blur(8px)}
+      50% { width: 210px; opacity: 0.35; filter: blur(5px) }
+      100% { width: 200px; opacity: 0.3; filter: blur(8px) }
     }
 
     @keyframes g012 {
