@@ -8,7 +8,7 @@ export class Hero {
 @Component({
   selector: 'my-app',
   template: `
-    <div (click)="watchForChanges()" [class]="'shadow shadow' + size">
+    <div [class]="'shadow shadow' + size">
       <div class="character">
         <img [class]="'eyes' + size" src="app/img/eyes.svg"/>
         <div [class]="'gitte gitte' + size"></div>
@@ -30,8 +30,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   watchForChanges(): void {
-    console.log("watching");
-    setTimeout(() =>
+    setInterval(() =>
       this.http.request('http://localhost:8080').subscribe((res: Response) => {
         const data = res.json();
         this.size=data.lines;
