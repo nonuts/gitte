@@ -44,7 +44,6 @@ img {
 
 .shadow {
   transition: all 200ms linear;
-  transform: rotate(10deg);
 }
 .shadow:before {
   content:"";

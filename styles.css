@@ -3,3 +3,16 @@ html {
 
 }
 
+body {
+  background-image: url("app/img/bg.svg");
+  background-size: 50% 70%;
+  background-repeat: repeat-x;
+  background-position-x: 100px;
+  animation: slide 1s linear infinite;
+  transform: rotate(10deg);
+}
+
+@keyframes slide {
+  0% { background-position-x: 0px }
+  100% { background-position-x: -600px }
+}
