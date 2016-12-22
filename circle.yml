@@ -1,6 +1,6 @@
 test:
   override:
-    - false
+    - exit 1
 
 dependencies:
   override:
