@@ -7,12 +7,10 @@ export class Hero {
 @Component({
   selector: 'my-app',
   template: `
-    <div class="shadow">
+    <div (click)="makeRequest()" [class]="'shadow shadow' + size">
       <div class="character">
-        <img [class]="'eyes' + size" (click)="makeRequest()" src="app/img/eyes.svg"/>
-        <div [class]="'gitte gitte' + size"
-        (click)="makeRequest()"
-        ></div>
+        <img [class]="'eyes' + size" src="app/img/eyes.svg"/>
+        <div [class]="'gitte gitte' + size"></div>
     </div>
     </div>
     
