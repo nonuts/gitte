@@ -1,6 +1,6 @@
 test:
   override:
-    - exit 1
+    - echo TEST
 
 dependencies:
   override:
