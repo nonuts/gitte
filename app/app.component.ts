@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AfterViewInit} from 'angular2/core';
+import {AfterViewInit} from '@angular/core';
 import { Http, Response, HttpModule } from '@angular/http';
 export class Hero {
   id: number;
@@ -26,6 +26,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.http.request('http://localhost:8080').subscribe((res: Response) => {
+      const data = res.json();
+      this.size=data.lines;
+      this.watchForChanges();
+    })
     this.watchForChanges();
   }
 
