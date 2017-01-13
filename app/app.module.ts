@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { HttpModule } from '@angular/http'
+import { GitteComponent } from './gitte.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -10,7 +11,8 @@ import { HttpModule } from '@angular/http'
     HttpModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    GitteComponent,
   ],
   bootstrap: [ AppComponent ]
 })

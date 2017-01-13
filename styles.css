@@ -4,12 +4,12 @@ html {
 }
 
 body {
-  background-image: url("app/img/bg.svg");
+  /*background-image: url("app/img/bg.svg");
   background-size: 50% 70%;
   background-repeat: repeat-x;
   background-position-x: 100px;
   animation: slide 1s linear infinite;
-  transform: rotate(10deg);
+  transform: rotate(10deg);*/
 }
 
 @keyframes slide {
