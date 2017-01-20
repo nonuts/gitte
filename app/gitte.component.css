@@ -22,6 +22,10 @@
   font-size: 40px;
 }
 
+.image-url{
+  margin-top: 100px;
+}
+
 img {
   position: absolute;
   width: 100px;

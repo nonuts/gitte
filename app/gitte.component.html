@@ -1,6 +1,10 @@
-<div [class]="'shadow shadow' + size + ' stagerank' + stageRank" [attr.data-stagerank]="stageRank">
+<div [class.tada]="pokedGitte" [class]="'animated shadow shadow' + size + ' stagerank' + stageRank" [attr.data-stagerank]="stageRank" (click)="pokeMe()">
   <div class="character">
     <img [class]="'eyes' + size" src="app/img/eyes.svg"/>
-    <div [class]="'gitte gitte' + size"></div>
+    <div [class]="'gitte gitte' + size" [ngStyle]="{'background-image': 'url(' + this.url + ')'}"></div>
+  </div>
+  <div class="image-url">
+    <label>url: </label>
+    <input [(ngModel)]="this.url" placeholder="name">
   </div>
 </div>

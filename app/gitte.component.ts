@@ -15,14 +15,15 @@ export class GitteComponent implements AfterViewInit {
   size: number;
 
   constructor(private http: Http) {
-
+    this.pokedGitte = false;
   }
 
   ngAfterViewInit() {
     this.http.request('http://localhost:8080').subscribe((res: Response) => {
       const data = res.json();
       this.size = data.lines;
-      this.stageRank = Math.floor(Math.random() * 5;
+      this.stageRank = Math.floor(Math.random() * 5);
+      this.url = "app/img/body.svg"
       this.watchForChanges();
     })
     this.watchForChanges();
@@ -31,10 +32,11 @@ export class GitteComponent implements AfterViewInit {
   watchForChanges(): void {
     setTimeout(() => {
       const randomNumber = this.getRandomInt();
-      console.log("got number: ", randomNumber);
       this.size = randomNumber;
       this.watchForChanges();
-    } , 5000);
+      this.pokedGitte = false;
+      console.log(this.url);
+    } , 7000);
 
     // setTimeout(() =>
     //     this.http.request('http://localhost:8080').subscribe((res: Response) => {
@@ -50,6 +52,10 @@ export class GitteComponent implements AfterViewInit {
     const min = 0;
     const max = 4;
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  pokeMe() {
+    this.pokedGitte = true;
   }
 
 }
