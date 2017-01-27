@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
+    <gitteManager></gitteManager>
     <gitte></gitte>
     <gitte></gitte>
     <gitte></gitte>

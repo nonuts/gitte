@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { HttpModule } from '@angular/http'
 import { GitteComponent } from './gitte.component';
+import { GitteManagerComponent } from './gitteManager.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -13,6 +14,7 @@ import { GitteComponent } from './gitte.component';
   declarations: [
     AppComponent,
     GitteComponent,
+    GitteManagerComponent,
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,0 +1,8 @@
+<form class="gitteManager">
+  Neue Gitte auf die Bühne:
+  <input #contestantUrl type="text" placeholder="url"/>
+  <input #contestantName type="text" placeholder="github reponame"/>
+  <button
+    (click)="stageGitte(contestantUrl.value, contestantName.value)"
+  >Cast!</button>
+</form>

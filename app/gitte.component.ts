@@ -12,6 +12,10 @@ export class GitteComponent implements AfterViewInit {
 
   stageRank: number;
 
+  url: string;
+
+  pokedGitte: boolean;
+
   size: number;
 
   constructor(private http: Http) {
@@ -23,9 +27,9 @@ export class GitteComponent implements AfterViewInit {
       const data = res.json();
       this.size = data.lines;
       this.stageRank = Math.floor(Math.random() * 5);
-      this.url = "app/img/body.svg"
+      this.url = "app/img/body.svg";
       this.watchForChanges();
-    })
+    });
     this.watchForChanges();
   }
 
@@ -35,7 +39,6 @@ export class GitteComponent implements AfterViewInit {
       this.size = randomNumber;
       this.watchForChanges();
       this.pokedGitte = false;
-      console.log(this.url);
     } , 7000);
 
     // setTimeout(() =>
